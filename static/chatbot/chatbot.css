@@ -1,0 +1,120 @@
+/* ================= CHATBOT ICON ================= */
+
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 9999; /* Always above footer/layout */
+}
+
+/* ================= CHATBOT WINDOW ================= */
+
+#chatbot {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 320px;
+    max-height: 420px;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Escape page layout */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Hidden state */
+.hidden {
+    display: none;
+}
+
+/* ================= HEADER ================= */
+
+.chatbot-header {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chatbot-header {
+    position: relative;
+    z-index: 1;
+}
+
+.chatbot-header button {
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ================= MESSAGES ================= */
+
+#chat-messages {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    font-size: 14px;
+    background: #fff;
+}
+
+.user {
+    text-align: right;
+    margin: 6px 0;
+    font-weight: bold;
+}
+
+.bot {
+    text-align: left;
+    margin: 6px 0;
+    color: #333;
+}
+
+/* ================= INPUT ================= */
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.chatbot-input button {
+    padding: 10px 14px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================= SAFETY ISOLATION ================= */
+
+/* Prevent global CSS from breaking chatbot */
+#chatbot,
+#chatbot * {
+    box-sizing: border-box;
+}

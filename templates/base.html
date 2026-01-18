@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <!-- Main Site Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Chatbot Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot/chatbot.css') }}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="header-left">
+        <a href="/" class="logo">HOME</a>
+    </div>
+
+    <div class="header-right">
+        <nav class="nav-links">
+            <a href="/services">Services & Pricing</a>
+            <a href="#">About</a>
+            <a href="/contact">Contact</a>
+            <a href="#">Login</a>
+        </nav>
+
+        <div class="social-icons">
+            <span>🌐</span>
+            <span>💼</span>
+        </div>
+    </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <p>© 2026 My Portfolio</p>
+</footer>
+
